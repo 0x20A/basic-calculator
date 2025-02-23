@@ -72,6 +72,14 @@ h2 {
   cursor: pointer;
 }
 
+.button:hover {
+  background-color: rgb(241, 240, 240);
+}
+
+.button:active {
+  background-color: white;
+}
+
 .sign-button {
   color: rgb(69, 144, 229);
 }
