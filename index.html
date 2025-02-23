@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <h2>Basic Calculator</h2>
+
+  <div class="container">  
+
+    <div class="screen">
+      <p class="js-show-calculation"></p>
+    </div>
+
+    <div class="buttons">
+      <button class="button" onclick="
+        updateCalculation('1');
+      ">
+        1
+      </button>
+      <button class="button" onclick="
+        updateCalculation('2');
+      ">
+        2
+      </button>
+    
+      <button class="button" onclick="
+        updateCalculation('3');
+      ">
+        3
+      </button>
+    
+      <button class="button sign-button" onclick="
+        updateCalculation('+');
+      ">
+        +
+      </button>
+    
+    
+      <button class="button" onclick="
+        updateCalculation('4');
+      ">
+        4
+      </button>
+      <button class="button" onclick="
+        updateCalculation('5');
+      ">
+        5
+      </button>
+    
+      <button class="button" onclick="
+        updateCalculation('6');
+      ">
+        6
+      </button>
+    
+      <button class="button sign-button" onclick="
+        updateCalculation('-');
+      ">
+        -
+      </button>
+    
+    
+      <button class="button" onclick="
+        updateCalculation('7');
+      ">
+        7
+      </button>
+      <button class="button" onclick="
+        updateCalculation('8');
+      ">
+        8
+      </button>
+    
+      <button class="button" onclick="
+        updateCalculation('9');
+      ">
+        9
+      </button>
+    
+      <button class="button sign-button" onclick="
+        updateCalculation('*');
+      ">
+        *
+      </button>
+    
+    
+      <button class="button" onclick="
+        updateCalculation('0');
+      ">
+        0
+      </button>
+      <button class="button" onclick="
+        updateCalculation('.');
+      ">
+        .
+      </button>
+    
+      <button class="button sign-button" onclick="
+      calculation = eval(calculation);
+      showCalculation();
+      // saving the calculation
+      localStorage.setItem('calculation', calculation);
+      ">
+        =
+      </button>
+    
+      <button class="button sign-button" onclick="
+        updateCalculation('/');
+      ">
+        /
+      </button>
+    
+      <button class="button sign-button" onclick="
+        calculation = '';
+        showCalculation();
+        // saving the calculation
+        localStorage.setItem('calculation', calculation);
+      ">
+        <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="rgb(69, 144, 229)">
+          <path d="m456-320 104-104 104 104 56-56-104-104 104-104-56-56-104 104-104-104-56 56 104 104-104 104 56 56Zm-96 160q-19 0-36-8.5T296-192L80-480l216-288q11-15 28-23.5t36-8.5h440q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H360ZM180-480l180 240h440v-480H360L180-480Zm400 0Z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <footer class="footer">Made by 0x20A</footer>
+
+  <script src="calculator.js"></script>
+</body>
+</html>
